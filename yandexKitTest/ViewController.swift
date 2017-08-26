@@ -9,17 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let manager = APIManager()
 
+    
+    //MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        manager.loadPlaces(stringParameter: "караганда") {
+            (places) in
+            print("Places = \(places.first!)")
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    //MARK: Methods
 
 }
 
