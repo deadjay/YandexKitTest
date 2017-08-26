@@ -7,8 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		439507791F518691002FF5BA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507781F518691002FF5BA /* OpenAL.framework */; };
+		4395077B1F518695002FF5BA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395077A1F518695002FF5BA /* AudioToolbox.framework */; };
+		4395077D1F51869D002FF5BA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395077C1F51869D002FF5BA /* AVFoundation.framework */; };
+		4395077F1F5186A2002FF5BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395077E1F5186A2002FF5BA /* CoreData.framework */; };
+		439507811F5186AB002FF5BA /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507801F5186AB002FF5BA /* CoreLocation.framework */; };
+		439507831F5186B3002FF5BA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507821F5186B3002FF5BA /* CoreTelephony.framework */; };
+		439507851F5186C5002FF5BA /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507841F5186C5002FF5BA /* libsqlite3.0.tbd */; };
+		439507871F5186D2002FF5BA /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507861F5186D2002FF5BA /* libstdc++.tbd */; };
+		439507891F5186DD002FF5BA /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507881F5186DD002FF5BA /* libxml2.tbd */; };
+		4395078B1F5186F1002FF5BA /* libYandexMapKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395078A1F5186F1002FF5BA /* libYandexMapKit.a */; };
+		4395078D1F5186FE002FF5BA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395078C1F5186FE002FF5BA /* libz.tbd */; };
+		4395078F1F518706002FF5BA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395078E1F518706002FF5BA /* MessageUI.framework */; };
+		439507911F51870E002FF5BA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507901F51870E002FF5BA /* OpenGLES.framework */; };
+		439507931F518714002FF5BA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507921F518714002FF5BA /* QuartzCore.framework */; };
+		439507951F51871C002FF5BA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507941F51871C002FF5BA /* Security.framework */; };
+		439507971F518724002FF5BA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507961F518724002FF5BA /* SystemConfiguration.framework */; };
+		439507C31F5199C3002FF5BA /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439507C21F5199C3002FF5BA /* SearchViewController.swift */; };
+		439507C61F51A659002FF5BA /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439507C51F51A659002FF5BA /* CustomSearchBar.swift */; };
+		439507C91F51C3A5002FF5BA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439507C81F51C3A5002FF5BA /* LocationManager.swift */; };
 		43B1E8401F4EDA8200BF2CE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1E83F1F4EDA8200BF2CE7 /* AppDelegate.swift */; };
-		43B1E8421F4EDA8200BF2CE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1E8411F4EDA8200BF2CE7 /* ViewController.swift */; };
+		43B1E8421F4EDA8200BF2CE7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B1E8411F4EDA8200BF2CE7 /* MapViewController.swift */; };
 		43B1E8451F4EDA8200BF2CE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B1E8431F4EDA8200BF2CE7 /* Main.storyboard */; };
 		43B1E8471F4EDA8200BF2CE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43B1E8461F4EDA8200BF2CE7 /* Assets.xcassets */; };
 		43B1E84A1F4EDA8200BF2CE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43B1E8481F4EDA8200BF2CE7 /* LaunchScreen.storyboard */; };
@@ -16,13 +35,34 @@
 		43CF11C11F50303000EFDE37 /* APIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CF11C01F50303000EFDE37 /* APIParser.swift */; };
 		43CF11C31F50304000EFDE37 /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CF11C21F50304000EFDE37 /* APIRequests.swift */; };
 		43CF11C61F50470300EFDE37 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CF11C51F50470300EFDE37 /* Place.swift */; };
-		C51146362DAE9EBEDFAD9DAF /* Pods_yandexKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85230D1BD7E1E977F83ACDE4 /* Pods_yandexKitTest.framework */; };
+		9BA1A8A855DBAD6D5B6FD4E8 /* Pods_yandexKitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F616108B06368A33D32A6 /* Pods_yandexKitTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		439507721F518034002FF5BA /* libYandexMapKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libYandexMapKit.a; path = Pods/YandexMapKit/libYandexMapKit.a; sourceTree = "<group>"; };
+		439507781F518691002FF5BA /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		4395077A1F518695002FF5BA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4395077C1F51869D002FF5BA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4395077E1F5186A2002FF5BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		439507801F5186AB002FF5BA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		439507821F5186B3002FF5BA /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		439507841F5186C5002FF5BA /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		439507861F5186D2002FF5BA /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		439507881F5186DD002FF5BA /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
+		4395078A1F5186F1002FF5BA /* libYandexMapKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libYandexMapKit.a; path = YandexMapKit/libYandexMapKit.a; sourceTree = "<group>"; };
+		4395078C1F5186FE002FF5BA /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4395078E1F518706002FF5BA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		439507901F51870E002FF5BA /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		439507921F518714002FF5BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		439507941F51871C002FF5BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		439507961F518724002FF5BA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		439507C01F518A5D002FF5BA /* YandexMapKitBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YandexMapKitBridgingHeader.h; sourceTree = "<group>"; };
+		439507C21F5199C3002FF5BA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		439507C51F51A659002FF5BA /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		439507C81F51C3A5002FF5BA /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		43B1E83C1F4EDA8200BF2CE7 /* yandexKitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yandexKitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43B1E83F1F4EDA8200BF2CE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		43B1E8411F4EDA8200BF2CE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43B1E8411F4EDA8200BF2CE7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		43B1E8441F4EDA8200BF2CE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43B1E8461F4EDA8200BF2CE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43B1E8491F4EDA8200BF2CE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,9 +71,9 @@
 		43CF11C01F50303000EFDE37 /* APIParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIParser.swift; sourceTree = "<group>"; };
 		43CF11C21F50304000EFDE37 /* APIRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
 		43CF11C51F50470300EFDE37 /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		48ECA1412944987AD71DE834 /* Pods-yandexKitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yandexKitTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-yandexKitTest/Pods-yandexKitTest.release.xcconfig"; sourceTree = "<group>"; };
-		85230D1BD7E1E977F83ACDE4 /* Pods_yandexKitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yandexKitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA440F8A5780D9BE025D48B3 /* Pods-yandexKitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yandexKitTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yandexKitTest/Pods-yandexKitTest.debug.xcconfig"; sourceTree = "<group>"; };
+		4DBF128FCF1A2F74D6B6D779 /* Pods-yandexKitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yandexKitTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-yandexKitTest/Pods-yandexKitTest.release.xcconfig"; sourceTree = "<group>"; };
+		6FFE2DEB3971DF9DE8F785EA /* Pods-yandexKitTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yandexKitTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-yandexKitTest/Pods-yandexKitTest.debug.xcconfig"; sourceTree = "<group>"; };
+		E40F616108B06368A33D32A6 /* Pods_yandexKitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yandexKitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,19 +81,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C51146362DAE9EBEDFAD9DAF /* Pods_yandexKitTest.framework in Frameworks */,
+				439507971F518724002FF5BA /* SystemConfiguration.framework in Frameworks */,
+				439507951F51871C002FF5BA /* Security.framework in Frameworks */,
+				439507931F518714002FF5BA /* QuartzCore.framework in Frameworks */,
+				439507911F51870E002FF5BA /* OpenGLES.framework in Frameworks */,
+				4395078F1F518706002FF5BA /* MessageUI.framework in Frameworks */,
+				4395078D1F5186FE002FF5BA /* libz.tbd in Frameworks */,
+				4395078B1F5186F1002FF5BA /* libYandexMapKit.a in Frameworks */,
+				439507891F5186DD002FF5BA /* libxml2.tbd in Frameworks */,
+				439507871F5186D2002FF5BA /* libstdc++.tbd in Frameworks */,
+				439507851F5186C5002FF5BA /* libsqlite3.0.tbd in Frameworks */,
+				439507831F5186B3002FF5BA /* CoreTelephony.framework in Frameworks */,
+				439507811F5186AB002FF5BA /* CoreLocation.framework in Frameworks */,
+				4395077F1F5186A2002FF5BA /* CoreData.framework in Frameworks */,
+				4395077D1F51869D002FF5BA /* AVFoundation.framework in Frameworks */,
+				4395077B1F518695002FF5BA /* AudioToolbox.framework in Frameworks */,
+				439507791F518691002FF5BA /* OpenAL.framework in Frameworks */,
+				9BA1A8A855DBAD6D5B6FD4E8 /* Pods_yandexKitTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D252CDA142FEBA0CADCD0C1 /* Frameworks */ = {
+		439507741F5181EF002FF5BA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				85230D1BD7E1E977F83ACDE4 /* Pods_yandexKitTest.framework */,
+				439507C11F518ECD002FF5BA /* BridgingHeadets */,
 			);
-			name = Frameworks;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		439507C11F518ECD002FF5BA /* BridgingHeadets */ = {
+			isa = PBXGroup;
+			children = (
+				439507C01F518A5D002FF5BA /* YandexMapKitBridgingHeader.h */,
+			);
+			name = BridgingHeadets;
+			sourceTree = "<group>";
+		};
+		439507C41F51A647002FF5BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				439507C51F51A659002FF5BA /* CustomSearchBar.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		439507C71F51C209002FF5BA /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				439507C81F51C3A5002FF5BA /* LocationManager.swift */,
+			);
+			name = LocationManager;
 			sourceTree = "<group>";
 		};
 		43B1E8331F4EDA8200BF2CE7 = {
@@ -61,8 +141,8 @@
 			children = (
 				43B1E83E1F4EDA8200BF2CE7 /* yandexKitTest */,
 				43B1E83D1F4EDA8200BF2CE7 /* Products */,
-				B3DAD9080FB5F197004B3242 /* Pods */,
-				3D252CDA142FEBA0CADCD0C1 /* Frameworks */,
+				4FBFA4BCFE510C0B47312631 /* Pods */,
+				BD795F6D90C4A77BD581A515 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,13 +157,17 @@
 		43B1E83E1F4EDA8200BF2CE7 /* yandexKitTest */ = {
 			isa = PBXGroup;
 			children = (
+				439507C71F51C209002FF5BA /* LocationManager */,
+				439507C41F51A647002FF5BA /* Views */,
+				439507741F5181EF002FF5BA /* Supporting Files */,
 				43CF11C41F5046D500EFDE37 /* SimpleModels */,
 				43CF11BD1F502ED400EFDE37 /* API */,
-				43B1E83F1F4EDA8200BF2CE7 /* AppDelegate.swift */,
-				43B1E8411F4EDA8200BF2CE7 /* ViewController.swift */,
+				43B1E8411F4EDA8200BF2CE7 /* MapViewController.swift */,
+				439507C21F5199C3002FF5BA /* SearchViewController.swift */,
 				43B1E8431F4EDA8200BF2CE7 /* Main.storyboard */,
-				43B1E8461F4EDA8200BF2CE7 /* Assets.xcassets */,
 				43B1E8481F4EDA8200BF2CE7 /* LaunchScreen.storyboard */,
+				43B1E83F1F4EDA8200BF2CE7 /* AppDelegate.swift */,
+				43B1E8461F4EDA8200BF2CE7 /* Assets.xcassets */,
 				43B1E84B1F4EDA8200BF2CE7 /* Info.plist */,
 			);
 			path = yandexKitTest;
@@ -107,13 +191,38 @@
 			name = SimpleModels;
 			sourceTree = "<group>";
 		};
-		B3DAD9080FB5F197004B3242 /* Pods */ = {
+		4FBFA4BCFE510C0B47312631 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BA440F8A5780D9BE025D48B3 /* Pods-yandexKitTest.debug.xcconfig */,
-				48ECA1412944987AD71DE834 /* Pods-yandexKitTest.release.xcconfig */,
+				6FFE2DEB3971DF9DE8F785EA /* Pods-yandexKitTest.debug.xcconfig */,
+				4DBF128FCF1A2F74D6B6D779 /* Pods-yandexKitTest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BD795F6D90C4A77BD581A515 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				439507961F518724002FF5BA /* SystemConfiguration.framework */,
+				439507941F51871C002FF5BA /* Security.framework */,
+				439507921F518714002FF5BA /* QuartzCore.framework */,
+				439507901F51870E002FF5BA /* OpenGLES.framework */,
+				4395078E1F518706002FF5BA /* MessageUI.framework */,
+				4395078C1F5186FE002FF5BA /* libz.tbd */,
+				4395078A1F5186F1002FF5BA /* libYandexMapKit.a */,
+				439507881F5186DD002FF5BA /* libxml2.tbd */,
+				439507861F5186D2002FF5BA /* libstdc++.tbd */,
+				439507841F5186C5002FF5BA /* libsqlite3.0.tbd */,
+				439507821F5186B3002FF5BA /* CoreTelephony.framework */,
+				439507801F5186AB002FF5BA /* CoreLocation.framework */,
+				4395077E1F5186A2002FF5BA /* CoreData.framework */,
+				4395077C1F51869D002FF5BA /* AVFoundation.framework */,
+				4395077A1F518695002FF5BA /* AudioToolbox.framework */,
+				439507781F518691002FF5BA /* OpenAL.framework */,
+				439507721F518034002FF5BA /* libYandexMapKit.a */,
+				E40F616108B06368A33D32A6 /* Pods_yandexKitTest.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,12 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 43B1E84E1F4EDA8200BF2CE7 /* Build configuration list for PBXNativeTarget "yandexKitTest" */;
 			buildPhases = (
-				5F6FB64D259B8A3D2438E3DA /* [CP] Check Pods Manifest.lock */,
+				28F1A2E0B9CF480C8789D29E /* [CP] Check Pods Manifest.lock */,
 				43B1E8381F4EDA8200BF2CE7 /* Sources */,
 				43B1E8391F4EDA8200BF2CE7 /* Frameworks */,
 				43B1E83A1F4EDA8200BF2CE7 /* Resources */,
-				14153542661753BFE12EA57D /* [CP] Embed Pods Frameworks */,
-				5049A33D63618081820D477E /* [CP] Copy Pods Resources */,
+				3EDC6F6B506E7D79E9275930 /* [CP] Embed Pods Frameworks */,
+				FB83CCA0E945DA3EA2020CC6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,37 +297,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		14153542661753BFE12EA57D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yandexKitTest/Pods-yandexKitTest-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5049A33D63618081820D477E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yandexKitTest/Pods-yandexKitTest-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5F6FB64D259B8A3D2438E3DA /* [CP] Check Pods Manifest.lock */ = {
+		28F1A2E0B9CF480C8789D29E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -233,6 +312,36 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		3EDC6F6B506E7D79E9275930 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yandexKitTest/Pods-yandexKitTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB83CCA0E945DA3EA2020CC6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-yandexKitTest/Pods-yandexKitTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -241,11 +350,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				43CF11BF1F50302600EFDE37 /* APIManager.swift in Sources */,
+				439507C31F5199C3002FF5BA /* SearchViewController.swift in Sources */,
 				43CF11C11F50303000EFDE37 /* APIParser.swift in Sources */,
 				43CF11C31F50304000EFDE37 /* APIRequests.swift in Sources */,
 				43CF11C61F50470300EFDE37 /* Place.swift in Sources */,
-				43B1E8421F4EDA8200BF2CE7 /* ViewController.swift in Sources */,
+				43B1E8421F4EDA8200BF2CE7 /* MapViewController.swift in Sources */,
+				439507C61F51A659002FF5BA /* CustomSearchBar.swift in Sources */,
 				43B1E8401F4EDA8200BF2CE7 /* AppDelegate.swift in Sources */,
+				439507C91F51C3A5002FF5BA /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +470,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -366,29 +479,59 @@
 		};
 		43B1E84F1F4EDA8200BF2CE7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA440F8A5780D9BE025D48B3 /* Pods-yandexKitTest.debug.xcconfig */;
+			baseConfigurationReference = 6FFE2DEB3971DF9DE8F785EA /* Pods-yandexKitTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9K93F66NC9;
 				INFOPLIST_FILE = yandexKitTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YandexMapKit",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-all_load",
+					"-Obj-C",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.deadjay.yandexKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = yandexKitTest/YandexMapKitBridgingHeader.h;
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
 		43B1E8501F4EDA8200BF2CE7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48ECA1412944987AD71DE834 /* Pods-yandexKitTest.release.xcconfig */;
+			baseConfigurationReference = 4DBF128FCF1A2F74D6B6D779 /* Pods-yandexKitTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9K93F66NC9;
 				INFOPLIST_FILE = yandexKitTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YandexMapKit",
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-all_load",
+					"-Obj-C",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.deadjay.yandexKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = yandexKitTest/YandexMapKitBridgingHeader.h;
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};
