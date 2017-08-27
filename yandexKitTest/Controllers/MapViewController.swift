@@ -29,7 +29,7 @@ class MapViewController: UIViewController, YMKLocationFetcherDelegate, YMKMapVie
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        mapView.showsUserLocation = true;
+        mapView.showsUserLocation = true
         //When we back here, the coordinates might change, so we moving to the new point
         configureAndInstallAnnotation()
     }
