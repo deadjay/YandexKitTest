@@ -8,6 +8,7 @@
 
 import Foundation
 
+//A singletone to store current location data
 class LocationManager {
     
     static let shared = LocationManager()
@@ -16,5 +17,12 @@ class LocationManager {
     var long = 19.750441
     var zoomLevel: UInt = 2
     var name = ""
+    var shouldSetAnnotation = false
+    
+    func setLocationAtPlace(place: Place) {
+        lat = place.lat
+        long = place.long
+        name = place.name
+    }
     
 }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		434445521F5311D000AF456A /* TapHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434445511F5311D000AF456A /* TapHintView.swift */; };
+		434445561F5323AC00AF456A /* PlacesAroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434445551F5323AC00AF456A /* PlacesAroundViewController.swift */; };
+		437BE91C1F52C7EE00F21B74 /* TableViewRoutineDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437BE91B1F52C7EE00F21B74 /* TableViewRoutineDelegates.swift */; };
+		437BE91E1F52EF7400F21B74 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437BE91D1F52EF7400F21B74 /* PointAnnotation.swift */; };
 		439507791F518691002FF5BA /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 439507781F518691002FF5BA /* OpenAL.framework */; };
 		4395077B1F518695002FF5BA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395077A1F518695002FF5BA /* AudioToolbox.framework */; };
 		4395077D1F51869D002FF5BA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4395077C1F51869D002FF5BA /* AVFoundation.framework */; };
@@ -39,6 +43,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		434445511F5311D000AF456A /* TapHintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapHintView.swift; sourceTree = "<group>"; };
+		434445551F5323AC00AF456A /* PlacesAroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAroundViewController.swift; sourceTree = "<group>"; };
+		434445581F5327B500AF456A /* YandexMapKitBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YandexMapKitBridgingHeader.h; sourceTree = "<group>"; };
+		437BE91B1F52C7EE00F21B74 /* TableViewRoutineDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRoutineDelegates.swift; sourceTree = "<group>"; };
+		437BE91D1F52EF7400F21B74 /* PointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		439507721F518034002FF5BA /* libYandexMapKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libYandexMapKit.a; path = Pods/YandexMapKit/libYandexMapKit.a; sourceTree = "<group>"; };
 		439507781F518691002FF5BA /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		4395077A1F518695002FF5BA /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -56,7 +65,6 @@
 		439507921F518714002FF5BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		439507941F51871C002FF5BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		439507961F518724002FF5BA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		439507C01F518A5D002FF5BA /* YandexMapKitBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YandexMapKitBridgingHeader.h; sourceTree = "<group>"; };
 		439507C21F5199C3002FF5BA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		439507C51F51A659002FF5BA /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		439507C81F51C3A5002FF5BA /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -104,28 +112,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		434445571F5323B600AF456A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				43B1E8411F4EDA8200BF2CE7 /* MapViewController.swift */,
+				434445551F5323AC00AF456A /* PlacesAroundViewController.swift */,
+				439507C21F5199C3002FF5BA /* SearchViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		437BE91A1F52C7D900F21B74 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				437BE91B1F52C7EE00F21B74 /* TableViewRoutineDelegates.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		437BE9231F52FD7700F21B74 /* OnTapHintView */ = {
+			isa = PBXGroup;
+			children = (
+				434445511F5311D000AF456A /* TapHintView.swift */,
+			);
+			path = OnTapHintView;
+			sourceTree = "<group>";
+		};
 		439507741F5181EF002FF5BA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				439507C11F518ECD002FF5BA /* BridgingHeadets */,
+				43B1E8461F4EDA8200BF2CE7 /* Assets.xcassets */,
+				43B1E84B1F4EDA8200BF2CE7 /* Info.plist */,
+				43B1E8481F4EDA8200BF2CE7 /* LaunchScreen.storyboard */,
+				434445581F5327B500AF456A /* YandexMapKitBridgingHeader.h */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		439507C11F518ECD002FF5BA /* BridgingHeadets */ = {
-			isa = PBXGroup;
-			children = (
-				439507C01F518A5D002FF5BA /* YandexMapKitBridgingHeader.h */,
-			);
-			name = BridgingHeadets;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		439507C41F51A647002FF5BA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				437BE9231F52FD7700F21B74 /* OnTapHintView */,
 				439507C51F51A659002FF5BA /* CustomSearchBar.swift */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		439507C71F51C209002FF5BA /* LocationManager */ = {
@@ -133,16 +163,16 @@
 			children = (
 				439507C81F51C3A5002FF5BA /* LocationManager.swift */,
 			);
-			name = LocationManager;
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		43B1E8331F4EDA8200BF2CE7 = {
 			isa = PBXGroup;
 			children = (
-				43B1E83E1F4EDA8200BF2CE7 /* yandexKitTest */,
-				43B1E83D1F4EDA8200BF2CE7 /* Products */,
-				4FBFA4BCFE510C0B47312631 /* Pods */,
 				BD795F6D90C4A77BD581A515 /* Frameworks */,
+				4FBFA4BCFE510C0B47312631 /* Pods */,
+				43B1E83D1F4EDA8200BF2CE7 /* Products */,
+				43B1E83E1F4EDA8200BF2CE7 /* yandexKitTest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,18 +187,15 @@
 		43B1E83E1F4EDA8200BF2CE7 /* yandexKitTest */ = {
 			isa = PBXGroup;
 			children = (
-				439507C71F51C209002FF5BA /* LocationManager */,
-				439507C41F51A647002FF5BA /* Views */,
-				439507741F5181EF002FF5BA /* Supporting Files */,
-				43CF11C41F5046D500EFDE37 /* SimpleModels */,
 				43CF11BD1F502ED400EFDE37 /* API */,
-				43B1E8411F4EDA8200BF2CE7 /* MapViewController.swift */,
-				439507C21F5199C3002FF5BA /* SearchViewController.swift */,
-				43B1E8431F4EDA8200BF2CE7 /* Main.storyboard */,
-				43B1E8481F4EDA8200BF2CE7 /* LaunchScreen.storyboard */,
+				434445571F5323B600AF456A /* Controllers */,
+				437BE91A1F52C7D900F21B74 /* Helpers */,
+				439507C71F51C209002FF5BA /* LocationManager */,
+				43CF11C41F5046D500EFDE37 /* SimpleModels */,
+				439507741F5181EF002FF5BA /* Supporting Files */,
+				439507C41F51A647002FF5BA /* Views */,
 				43B1E83F1F4EDA8200BF2CE7 /* AppDelegate.swift */,
-				43B1E8461F4EDA8200BF2CE7 /* Assets.xcassets */,
-				43B1E84B1F4EDA8200BF2CE7 /* Info.plist */,
+				43B1E8431F4EDA8200BF2CE7 /* Main.storyboard */,
 			);
 			path = yandexKitTest;
 			sourceTree = "<group>";
@@ -180,15 +207,16 @@
 				43CF11C01F50303000EFDE37 /* APIParser.swift */,
 				43CF11C21F50304000EFDE37 /* APIRequests.swift */,
 			);
-			name = API;
+			path = API;
 			sourceTree = "<group>";
 		};
 		43CF11C41F5046D500EFDE37 /* SimpleModels */ = {
 			isa = PBXGroup;
 			children = (
 				43CF11C51F50470300EFDE37 /* Place.swift */,
+				437BE91D1F52EF7400F21B74 /* PointAnnotation.swift */,
 			);
-			name = SimpleModels;
+			path = SimpleModels;
 			sourceTree = "<group>";
 		};
 		4FBFA4BCFE510C0B47312631 /* Pods */ = {
@@ -350,14 +378,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				43CF11BF1F50302600EFDE37 /* APIManager.swift in Sources */,
+				434445561F5323AC00AF456A /* PlacesAroundViewController.swift in Sources */,
 				439507C31F5199C3002FF5BA /* SearchViewController.swift in Sources */,
 				43CF11C11F50303000EFDE37 /* APIParser.swift in Sources */,
+				434445521F5311D000AF456A /* TapHintView.swift in Sources */,
 				43CF11C31F50304000EFDE37 /* APIRequests.swift in Sources */,
 				43CF11C61F50470300EFDE37 /* Place.swift in Sources */,
 				43B1E8421F4EDA8200BF2CE7 /* MapViewController.swift in Sources */,
+				437BE91C1F52C7EE00F21B74 /* TableViewRoutineDelegates.swift in Sources */,
 				439507C61F51A659002FF5BA /* CustomSearchBar.swift in Sources */,
 				43B1E8401F4EDA8200BF2CE7 /* AppDelegate.swift in Sources */,
 				439507C91F51C3A5002FF5BA /* LocationManager.swift in Sources */,
+				437BE91E1F52EF7400F21B74 /* PointAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +402,7 @@
 				43B1E8441F4EDA8200BF2CE7 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		43B1E8481F4EDA8200BF2CE7 /* LaunchScreen.storyboard */ = {
@@ -378,6 +411,7 @@
 				43B1E8491F4EDA8200BF2CE7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -484,7 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9K93F66NC9;
-				INFOPLIST_FILE = yandexKitTest/Info.plist;
+				INFOPLIST_FILE = "yandexKitTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -500,7 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.deadjay.yandexKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = yandexKitTest/YandexMapKitBridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "yandexKitTest/Supporting Files/YandexMapKitBridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
@@ -513,7 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9K93F66NC9;
-				INFOPLIST_FILE = yandexKitTest/Info.plist;
+				INFOPLIST_FILE = "yandexKitTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -529,7 +563,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.deadjay.yandexKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = yandexKitTest/YandexMapKitBridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "yandexKitTest/Supporting Files/YandexMapKitBridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};

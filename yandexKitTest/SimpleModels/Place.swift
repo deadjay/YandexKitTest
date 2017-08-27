@@ -8,11 +8,9 @@
 
 import Foundation
 
-struct Place {
-    
+struct Place {    
     var id: Int
     var name: String
     var lat: Double
     var long: Double
-    
 }

@@ -11,6 +11,8 @@ import Alamofire
 
 private extension APIParser {
     //Method to tear down optional "pyramid of doom"
+    //This one works only when all requirements are met
+    //(funcs T U V and W can be executed )
     func if_let<T, U, V, W>(a: Optional<Any>, b: Optional<Any>,
                 c: Optional<Any>, d: Optional<Any>, fn: (T, U, V, W) -> ()) {
         if let a = a as? T {
@@ -29,7 +31,7 @@ class APIParser {
     
     //MARK: Public Methods
     
-    func parseReceivedData(data: DataResponse<Any>) -> Array<Place>? {
+    func parsePlaces(data: DataResponse<Any>) -> Array<Place>? {
         if let json = data.result.value {
             if let jsonResult = json as? Dictionary<String, AnyObject> {
                 return fetchPlaces(data: jsonResult)
@@ -38,8 +40,20 @@ class APIParser {
         return nil
     }
     
+    func parseSinglePlace(data: DataResponse<Any>) -> Place? {
+        if let json = data.result.value {
+            if let jsonResult = json as? Dictionary<String, AnyObject> {
+                if let place = fetchSinglePlace(data: jsonResult) {
+                    return place
+                }
+            }
+        }
+        return nil
+    }
+    
     //MARK: Private Methods
     
+    //Parsing several places
     private func fetchPlaces(data: Dictionary<String, AnyObject>) -> Array<Place>? {
         if let data = data["data"] as? Array<[String : Any]> {
             var places = [Place]()
@@ -51,6 +65,19 @@ class APIParser {
                 })
             }
             return places
+        }
+        return nil
+    }
+    
+    //Parsing single place
+    private func fetchSinglePlace(data: [String : AnyObject]) -> Place? {
+        if let object = data["data"] as? [String : AnyObject] {
+            var place = Place(id: 0, name: "", lat: 0.0, long: 0.0)
+                if_let(a: object["id"], b: object["name"], c: object["latitude"], d: object["longitude"],
+                       fn: { (id: Int, name: String, lat: Double, lon: Double) in
+                        place = Place(id: id, name: name, lat: lat, long: lon)
+                })
+            return place
         }
         return nil
     }
