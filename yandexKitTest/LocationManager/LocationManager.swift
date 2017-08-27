@@ -17,4 +17,10 @@ class LocationManager {
     var zoomLevel: UInt = 2
     var name = ""
     
+    func setLocationAtPlace(place: Place) {
+        lat = place.lat
+        long = place.long
+        name = place.name
+    }
+    
 }

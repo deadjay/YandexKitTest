@@ -29,10 +29,21 @@ class APIParser {
     
     //MARK: Public Methods
     
-    func parseReceivedData(data: DataResponse<Any>) -> Array<Place>? {
+    func parsePlaces(data: DataResponse<Any>) -> Array<Place>? {
         if let json = data.result.value {
             if let jsonResult = json as? Dictionary<String, AnyObject> {
                 return fetchPlaces(data: jsonResult)
+            }
+        }
+        return nil
+    }
+    
+    func parseSinglePlace(data: DataResponse<Any>) -> Place? {
+        if let json = data.result.value {
+            if let jsonResult = json as? Dictionary<String, AnyObject> {
+                if let place = fetchSinglePlace(data: jsonResult) {
+                    return place
+                }
             }
         }
         return nil
@@ -51,6 +62,18 @@ class APIParser {
                 })
             }
             return places
+        }
+        return nil
+    }
+    
+    private func fetchSinglePlace(data: [String : AnyObject]) -> Place? {
+        if let object = data["data"] as? [String : AnyObject] {
+            var place = Place(id: 0, name: "", lat: 0.0, long: 0.0)
+                if_let(a: object["id"], b: object["name"], c: object["latitude"], d: object["longitude"],
+                       fn: { (id: Int, name: String, lat: Double, lon: Double) in
+                        place = Place(id: id, name: name, lat: lat, long: lon)
+                })
+            return place
         }
         return nil
     }

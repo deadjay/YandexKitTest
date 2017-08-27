@@ -102,6 +102,14 @@
                                     <outlet property="delegate" destination="hok-4k-ivP" id="LXY-6R-7rX"/>
                                 </connections>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BA1-0X-xkV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hok-4k-ivP" id="kPS-cf-cLT"/>
+                                    <outlet property="delegate" destination="hok-4k-ivP" id="qlK-KJ-f9R"/>
+                                </connections>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usl-az-w2Z">
                                 <rect key="frame" x="307" y="28" width="52" height="30"/>
                                 <constraints>
@@ -113,14 +121,6 @@
                                     <action selector="cancelButtonDidTapped:" destination="hok-4k-ivP" eventType="touchUpInside" id="hNE-LJ-uFD"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BA1-0X-xkV">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="hok-4k-ivP" id="kPS-cf-cLT"/>
-                                    <outlet property="delegate" destination="hok-4k-ivP" id="qlK-KJ-f9R"/>
-                                </connections>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -138,20 +138,10 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="ZfL-Sj-fz2" id="cRu-xS-HlF"/>
-                        <outlet property="searchDisplayController" destination="NIZ-Ba-r6n" id="OsH-xR-IAh"/>
                         <outlet property="tableView" destination="BA1-0X-xkV" id="Xn7-5U-ggp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nf-wW-5vB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="NIZ-Ba-r6n">
-                    <connections>
-                        <outlet property="delegate" destination="hok-4k-ivP" id="iQ1-eG-0Iv"/>
-                        <outlet property="searchBar" destination="ZfL-Sj-fz2" id="IWr-cM-yQi"/>
-                        <outlet property="searchContentsController" destination="hok-4k-ivP" id="gM3-mR-wKm"/>
-                        <outlet property="searchResultsDataSource" destination="hok-4k-ivP" id="tJx-wF-ZxG"/>
-                        <outlet property="searchResultsDelegate" destination="hok-4k-ivP" id="7wM-kK-UEe"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1885.5999999999999" y="155.17241379310346"/>
         </scene>

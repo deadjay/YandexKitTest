@@ -28,7 +28,7 @@ class APIManager {
     
     //Loads places by giving string
     func loadPlaces(stringParameter: String, onFinish:@escaping([Place]) -> Void) {
-        loadData(url: APIManager.URL_GET_ADDRESS+stringParameter) {
+        loadMultipleData(url: APIManager.URL_GET_ADDRESS+stringParameter) {
             (places) in
             onFinish(places)
         }
@@ -36,26 +36,35 @@ class APIManager {
     
     //Loads places by giving coordinates
     func loadPlacesByCoordinates(lon: Double, lat: Double, onFinish:@escaping([Place]) -> Void) {
-        loadData(url: APIManager.URL_GET_BY_COORDINATES+"longitude=\(lon)&latitude=\(lat)") {
+        loadMultipleData(url: APIManager.URL_GET_BY_COORDINATES+"longitude=\(lon)&latitude=\(lat)") {
             (places) in
             onFinish(places)
         }
     }
     
-    //    //Loads nearest place by giving coordinates
-    func loadNearestPlace(lon: Double, lat: Double, onFinish:@escaping([Place]) -> Void) {
-        loadData(url: APIManager.URL_GET_NEAREST+"longitude=\(lon)&latitude=\(lat)") {
-            (places) in
-            onFinish(places)
+    //Loads nearest place by giving coordinates
+    func loadNearestPlace(lon: Double, lat: Double, onFinish:@escaping(_ place: Place) -> Void) {
+        loadSingleData(url: APIManager.URL_GET_NEAREST+"longitude=\(lon)&latitude=\(lat)") {
+            (place) in
+            onFinish(place)
         }
     }
     
     //MARK: Private Methods
     
-    private func loadData(url: String, completion:@escaping([Place]) -> Void) {
+    private func loadMultipleData(url: String, completion:@escaping([Place]) -> Void) {
         print("URL = \(url)")
         request.performGETRequest(url: url) { (dataResponse) in
-            if let result = self.parser.parseReceivedData(data: dataResponse) {
+            if let result = self.parser.parsePlaces(data: dataResponse) {
+                completion(result)
+            }
+        }
+    }
+    
+    private func loadSingleData(url: String, completion:@escaping(_ place: Place) -> Void) {
+        print("URL = \(url)")
+        request.performGETRequest(url: url) { (dataResponse) in
+            if let result = self.parser.parseSinglePlace(data: dataResponse) {
                 completion(result)
             }
         }
