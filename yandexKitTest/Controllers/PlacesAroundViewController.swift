@@ -10,26 +10,52 @@ import UIKit
 
 class PlacesAroundViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var tableViewRoutineDelegates: TableViewRoutineDelegates!
+    
+    let apiManager = APIManager()
+    var places = [Place]()
+    
+    
+    //UIViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        setupViewController()
+        loadResults()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: Methods
+    func setupViewController() {
+        self.tableViewRoutineDelegates =
+            TableViewRoutineDelegates(tableView: tableView, places: places, sender: self)
+        tableView.keyboardDismissMode = .onDrag
     }
-    */
+    
+    func loadResults() {
+        startSpinner()
+        apiManager.loadPlacesByCoordinates(lon: LocationManager.shared.long, lat: LocationManager.shared.lat) { (places) in
+            self.tableViewRoutineDelegates.sectionsRowsArray = places
+            self.stopSpinner()
+            self.tableView.reloadData()
+        }
+    }
+    
+    //MARK: UIButton Actions
+    @IBAction func cancelButtonDidTapped(_ sender: Any) {
+        LocationManager.shared.shouldSetAnnotation = false
+        dismiss(animated: true, completion: nil)
+    }
+}
 
+extension PlacesAroundViewController {
+    func startSpinner() {
+        tableView.addSubview(tableViewRoutineDelegates.spinner)
+        tableViewRoutineDelegates.spinner.startAnimating()
+    }
+    
+    func stopSpinner() {
+        tableViewRoutineDelegates.spinner.stopAnimating()
+    }
 }

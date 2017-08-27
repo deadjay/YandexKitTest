@@ -21,28 +21,20 @@ protocol PlacesDelegate: NSObjectProtocol {
 
 class TapHintView: UIView {
     
-    let VIEW_HEIGHT: CGFloat = 70.0
-
+    let VIEW_HEIGHT: CGFloat = 100.0
     var isPresented = false
+
     var showNearestPlaceButton = UIButton()
     var showPlacesAroundButton = UIButton()
+    var dismissButton = UIButton()
     var presentedView: UIView!
     
     weak var delegate: PlacesDelegate?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        showNearestPlaceButton.tag = WhichPlace.nearestPlace.rawValue
-        showPlacesAroundButton.tag = WhichPlace.placesAround.rawValue
-    }
-    
-    //typealias ShowPlacesButtonDidPressed = (_ place: WhichPlace) -> Void
-    //var onClickShowPlaces = ShowPlacesButtonDidPressed()
-    
     init(frame: CGRect, presentedView: UIView) {
         super.init(frame: frame)
-        //self.onClickShowPlaces = onClickShowPlaces
+        showNearestPlaceButton.tag = WhichPlace.nearestPlace.rawValue
+        showPlacesAroundButton.tag = WhichPlace.placesAround.rawValue
         self.presentedView = presentedView
     }
     
@@ -51,10 +43,8 @@ class TapHintView: UIView {
     }
     
     func showView() {
-        isPresented = !isPresented
-        //hiding view if it's already presented
+        //If already presented - do nothing
         if isPresented {
-            hideView()
             return
         }
         
@@ -78,19 +68,26 @@ class TapHintView: UIView {
         self.frame = CGRect(x: 0, y: presentedView.bounds.height,
                             width: presentedView.bounds.width, height: VIEW_HEIGHT)
         self.backgroundColor = .white
-        showNearestPlaceButton.frame = CGRect(x: 0, y: 0, width: self.bounds.width/2, height: self.bounds.height)
+        showNearestPlaceButton.frame = CGRect(x: 0, y: 0, width: self.bounds.width/2, height: VIEW_HEIGHT - 30)
         showNearestPlaceButton.setTitle("Show nearest place", for: .normal)
         showNearestPlaceButton.setTitleColor(.blue, for: .normal)
         showNearestPlaceButton.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
         showNearestPlaceButton.addTarget(self, action: #selector(buttonDidTapped(_:)), for: .touchUpInside)
         self.addSubview(showNearestPlaceButton)
         
-        showPlacesAroundButton.frame = CGRect(x: self.bounds.width/2, y: 0, width: self.bounds.width/2, height: self.bounds.height)
+        showPlacesAroundButton.frame = CGRect(x: self.bounds.width/2, y: 0, width: self.bounds.width/2, height: VIEW_HEIGHT - 30)
         showPlacesAroundButton.setTitle("Show places around", for: .normal)
         showPlacesAroundButton.setTitleColor(.blue, for: .normal)
         showPlacesAroundButton.titleLabel?.font = UIFont.systemFont(ofSize: 15.0)
         showPlacesAroundButton.addTarget(self, action: #selector(buttonDidTapped(_:)), for: .touchUpInside)
         self.addSubview(showPlacesAroundButton)
+        
+        dismissButton.frame = CGRect(x: 0, y: 70, width: self.bounds.width, height: VIEW_HEIGHT - 70)
+        dismissButton.setTitle("Dismiss", for: .normal)
+        dismissButton.setTitleColor(.blue, for: .normal)
+        dismissButton.titleLabel?.font = UIFont.systemFont(ofSize: 14.0)
+        dismissButton.addTarget(self, action: #selector(dismissButtonDidTapped), for: .touchUpInside)
+        self.addSubview(dismissButton)
         
         presentedView.addSubview(self)
     }
@@ -98,5 +95,10 @@ class TapHintView: UIView {
     //UIButton Actions
     func buttonDidTapped(_ sender: UIButton) {
         delegate?.buttonDidPressed(place: WhichPlace(rawValue: sender.tag)!)
+    }
+    
+    func dismissButtonDidTapped() {
+        hideView()
+        isPresented = false
     }
 }

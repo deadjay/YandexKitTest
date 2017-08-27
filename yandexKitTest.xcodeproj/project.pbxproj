@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		434445521F5311D000AF456A /* TapHintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434445511F5311D000AF456A /* TapHintView.swift */; };
-		434445541F5311DF00AF456A /* TapHintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434445531F5311DF00AF456A /* TapHintView.xib */; };
 		434445561F5323AC00AF456A /* PlacesAroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434445551F5323AC00AF456A /* PlacesAroundViewController.swift */; };
 		437BE91C1F52C7EE00F21B74 /* TableViewRoutineDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437BE91B1F52C7EE00F21B74 /* TableViewRoutineDelegates.swift */; };
 		437BE91E1F52EF7400F21B74 /* PointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437BE91D1F52EF7400F21B74 /* PointAnnotation.swift */; };
@@ -45,8 +44,8 @@
 
 /* Begin PBXFileReference section */
 		434445511F5311D000AF456A /* TapHintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapHintView.swift; sourceTree = "<group>"; };
-		434445531F5311DF00AF456A /* TapHintView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TapHintView.xib; sourceTree = "<group>"; };
 		434445551F5323AC00AF456A /* PlacesAroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesAroundViewController.swift; sourceTree = "<group>"; };
+		434445581F5327B500AF456A /* YandexMapKitBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YandexMapKitBridgingHeader.h; sourceTree = "<group>"; };
 		437BE91B1F52C7EE00F21B74 /* TableViewRoutineDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRoutineDelegates.swift; sourceTree = "<group>"; };
 		437BE91D1F52EF7400F21B74 /* PointAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointAnnotation.swift; sourceTree = "<group>"; };
 		439507721F518034002FF5BA /* libYandexMapKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libYandexMapKit.a; path = Pods/YandexMapKit/libYandexMapKit.a; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 		439507921F518714002FF5BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		439507941F51871C002FF5BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		439507961F518724002FF5BA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		439507C01F518A5D002FF5BA /* YandexMapKitBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YandexMapKitBridgingHeader.h; sourceTree = "<group>"; };
 		439507C21F5199C3002FF5BA /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		439507C51F51A659002FF5BA /* CustomSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		439507C81F51C3A5002FF5BA /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 				434445551F5323AC00AF456A /* PlacesAroundViewController.swift */,
 				439507C21F5199C3002FF5BA /* SearchViewController.swift */,
 			);
-			name = Controllers;
 			path = Controllers;
 			sourceTree = "<group>";
 		};
@@ -130,7 +127,6 @@
 			children = (
 				437BE91B1F52C7EE00F21B74 /* TableViewRoutineDelegates.swift */,
 			);
-			name = Helpers;
 			path = Helpers;
 			sourceTree = "<group>";
 		};
@@ -138,28 +134,19 @@
 			isa = PBXGroup;
 			children = (
 				434445511F5311D000AF456A /* TapHintView.swift */,
-				434445531F5311DF00AF456A /* TapHintView.xib */,
 			);
-			name = OnTapHintView;
 			path = OnTapHintView;
 			sourceTree = "<group>";
 		};
 		439507741F5181EF002FF5BA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				439507C11F518ECD002FF5BA /* BridgingHeadets */,
+				43B1E8461F4EDA8200BF2CE7 /* Assets.xcassets */,
+				43B1E84B1F4EDA8200BF2CE7 /* Info.plist */,
+				43B1E8481F4EDA8200BF2CE7 /* LaunchScreen.storyboard */,
+				434445581F5327B500AF456A /* YandexMapKitBridgingHeader.h */,
 			);
-			name = "Supporting Files";
 			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		439507C11F518ECD002FF5BA /* BridgingHeadets */ = {
-			isa = PBXGroup;
-			children = (
-				439507C01F518A5D002FF5BA /* YandexMapKitBridgingHeader.h */,
-			);
-			name = BridgingHeadets;
-			path = BridgingHeadets;
 			sourceTree = "<group>";
 		};
 		439507C41F51A647002FF5BA /* Views */ = {
@@ -168,7 +155,6 @@
 				437BE9231F52FD7700F21B74 /* OnTapHintView */,
 				439507C51F51A659002FF5BA /* CustomSearchBar.swift */,
 			);
-			name = Views;
 			path = Views;
 			sourceTree = "<group>";
 		};
@@ -177,7 +163,6 @@
 			children = (
 				439507C81F51C3A5002FF5BA /* LocationManager.swift */,
 			);
-			name = LocationManager;
 			path = LocationManager;
 			sourceTree = "<group>";
 		};
@@ -210,9 +195,6 @@
 				439507741F5181EF002FF5BA /* Supporting Files */,
 				439507C41F51A647002FF5BA /* Views */,
 				43B1E83F1F4EDA8200BF2CE7 /* AppDelegate.swift */,
-				43B1E8461F4EDA8200BF2CE7 /* Assets.xcassets */,
-				43B1E84B1F4EDA8200BF2CE7 /* Info.plist */,
-				43B1E8481F4EDA8200BF2CE7 /* LaunchScreen.storyboard */,
 				43B1E8431F4EDA8200BF2CE7 /* Main.storyboard */,
 			);
 			path = yandexKitTest;
@@ -225,7 +207,6 @@
 				43CF11C01F50303000EFDE37 /* APIParser.swift */,
 				43CF11C21F50304000EFDE37 /* APIRequests.swift */,
 			);
-			name = API;
 			path = API;
 			sourceTree = "<group>";
 		};
@@ -235,7 +216,6 @@
 				43CF11C51F50470300EFDE37 /* Place.swift */,
 				437BE91D1F52EF7400F21B74 /* PointAnnotation.swift */,
 			);
-			name = SimpleModels;
 			path = SimpleModels;
 			sourceTree = "<group>";
 		};
@@ -337,7 +317,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				43B1E84A1F4EDA8200BF2CE7 /* LaunchScreen.storyboard in Resources */,
-				434445541F5311DF00AF456A /* TapHintView.xib in Resources */,
 				43B1E8471F4EDA8200BF2CE7 /* Assets.xcassets in Resources */,
 				43B1E8451F4EDA8200BF2CE7 /* Main.storyboard in Resources */,
 			);
@@ -539,7 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9K93F66NC9;
-				INFOPLIST_FILE = yandexKitTest/Info.plist;
+				INFOPLIST_FILE = "yandexKitTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -555,7 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.deadjay.yandexKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = yandexKitTest/YandexMapKitBridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "yandexKitTest/Supporting Files/YandexMapKitBridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
@@ -568,7 +547,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9K93F66NC9;
-				INFOPLIST_FILE = yandexKitTest/Info.plist;
+				INFOPLIST_FILE = "yandexKitTest/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -584,7 +563,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.deadjay.yandexKitTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = yandexKitTest/YandexMapKitBridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "yandexKitTest/Supporting Files/YandexMapKitBridgingHeader.h";
 				SWIFT_VERSION = 3.0;
 				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};

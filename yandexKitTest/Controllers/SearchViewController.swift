@@ -36,8 +36,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func loadResults(text: String) {
+        startSpinner()
         apiManager.loadPlaces(stringParameter: text) { (loadedPlaces) in
             self.tableViewRoutineDelegates.sectionsRowsArray = loadedPlaces
+            self.stopSpinner()
             self.tableView.reloadData()
         }
 
@@ -52,6 +54,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
         if let text = searchBar.text {
             loadResults(text: text)
         }
@@ -59,7 +62,19 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     
     //MARK: UIButton Actions
     @IBAction func cancelButtonDidTapped(_ sender: Any) {
+        LocationManager.shared.shouldSetAnnotation = false
         dismiss(animated: true, completion: nil)
     }
 
+}
+
+extension SearchViewController {
+    func startSpinner() {
+        tableView.addSubview(tableViewRoutineDelegates.spinner)
+        tableViewRoutineDelegates.spinner.startAnimating()
+    }
+    
+    func stopSpinner() {
+        tableViewRoutineDelegates.spinner.stopAnimating()
+    }
 }

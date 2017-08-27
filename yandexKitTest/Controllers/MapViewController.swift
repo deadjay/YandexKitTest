@@ -11,31 +11,32 @@ import UIKit
 class MapViewController: UIViewController, YMKLocationFetcherDelegate, YMKMapViewDelegate, PlacesDelegate {
     
     private let searchControllerSegueID = "showSearchController"
+    private let placesControllerSegueID = "showPlacesController"
     
     @IBOutlet var mapView: YMKMapView!
     
-    let locationFetcher = YMKLocationFetcher()
-    var annotationPoint: PointAnnotation?
-    var hintView: TapHintView?
-    let apiManager = APIManager()
-    var coordinateOnTap = YMKMapCoordinate()
+    private let locationFetcher = YMKLocationFetcher()
+    private var annotationPoint: PointAnnotation?
+    private var hintView: TapHintView?
+    private let apiManager = APIManager()
+    private var coordinateOnTap = YMKMapCoordinate()
     
     //MARK: ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
+        mapView.isUserInteractionEnabled = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         mapView.showsUserLocation = true;
         //When we back here, the coordinates might change, so we moving to the new point
-        moveToPoint()
         configureAndInstallAnnotation()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        annotationPoint = nil
+        removePreviousAnnotationPoint()
     }
     
     //MARK: Methods
@@ -59,8 +60,15 @@ class MapViewController: UIViewController, YMKLocationFetcherDelegate, YMKMapVie
     func loadNearestPlace(lat: Double, lon: Double) {
         apiManager.loadNearestPlace(lon: lon, lat: lat) { (place) in
             LocationManager.shared.setLocationAtPlace(place: place)
-            self.moveToPoint()
+            LocationManager.shared.shouldSetAnnotation = true
             self.configureAndInstallAnnotation()
+        }
+    }
+    
+    func removePreviousAnnotationPoint() {
+        if (annotationPoint != nil) {
+            mapView.removeAnnotation(annotationPoint)
+            annotationPoint = nil
         }
     }
     
@@ -68,21 +76,36 @@ class MapViewController: UIViewController, YMKLocationFetcherDelegate, YMKMapVie
     
     func mapView(_ mapView: YMKMapView!, gotSingleTapAt coordinate: YMKMapCoordinate) {
         coordinateOnTap = coordinate
+        LocationManager.shared.lat = coordinate.latitude
+        LocationManager.shared.long = coordinate.longitude
+        LocationManager.shared.zoomLevel = mapView.zoomLevel
+        showInfoAnnotationOnTap(tapCoordinate: coordinate)
         hintView?.showView()
     }
     
     //MARK: Helpers
     
     func configureAndInstallAnnotation() {
-        if (annotationPoint != nil) {
-            mapView.removeAnnotation(annotationPoint)
-            annotationPoint = nil
+        removePreviousAnnotationPoint()
+        if !LocationManager.shared.shouldSetAnnotation {
+            return
         }
         annotationPoint = PointAnnotation()
         self.annotationPoint!.setCoordinate(YMKMapCoordinate(latitude: LocationManager.shared.lat,
                                                             longitude: LocationManager.shared.long))
         self.annotationPoint!.title = LocationManager.shared.name
         self.mapView.addAnnotation(self.annotationPoint)
+        moveToPoint()
+    }
+    
+    func showInfoAnnotationOnTap(tapCoordinate: YMKMapCoordinate) {
+        removePreviousAnnotationPoint()
+        annotationPoint = PointAnnotation()
+        self.annotationPoint!.setCoordinate(YMKMapCoordinate(latitude: tapCoordinate.latitude,
+                                                             longitude: tapCoordinate.longitude))
+        self.annotationPoint!.title = "\(tapCoordinate.latitude)\(tapCoordinate.longitude)"
+        self.mapView.addAnnotation(self.annotationPoint)
+        moveToPoint()
     }
     
     //MARK: YMKLocationFetcherDelegate
@@ -118,7 +141,11 @@ class MapViewController: UIViewController, YMKLocationFetcherDelegate, YMKMapVie
         case .nearestPlace:
             loadNearestPlace(lat: coordinateOnTap.latitude, lon: coordinateOnTap.longitude)
         case .placesAround:
-            print("")
+            //setting coordinates into manager, so that in presented controller
+            //we can load places by setted coordinates
+            LocationManager.shared.lat = coordinateOnTap.latitude
+            LocationManager.shared.long = coordinateOnTap.longitude
+            performSegue(withIdentifier: placesControllerSegueID, sender: self)
         }
     }
     

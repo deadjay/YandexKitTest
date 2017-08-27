@@ -74,6 +74,7 @@
                     <connections>
                         <outlet property="mapView" destination="8JT-ER-mc3" id="axY-57-H8Z"/>
                         <segue destination="hok-4k-ivP" kind="show" identifier="showSearchController" id="B5H-oH-rgl"/>
+                        <segue destination="Tgd-Vl-Bft" kind="show" identifier="showPlacesController" id="ZQE-f7-tl3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iRb-Ui-CHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,6 +145,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nf-wW-5vB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1885.5999999999999" y="155.17241379310346"/>
+        </scene>
+        <!--Places Around View Controller-->
+        <scene sceneID="o59-Ne-8LT">
+            <objects>
+                <viewController id="Tgd-Vl-Bft" customClass="PlacesAroundViewController" customModule="yandexKitTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WR9-Bq-CB7"/>
+                        <viewControllerLayoutGuide type="bottom" id="8h5-BP-bSf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZvD-4i-GSs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="94X-8d-rQR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9Z-5G-Icb">
+                                <rect key="frame" x="163.5" y="629" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonDidTapped:" destination="Tgd-Vl-Bft" eventType="touchUpInside" id="BQv-hC-Idn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="94X-8d-rQR" secondAttribute="trailing" id="9po-Z6-j8r"/>
+                            <constraint firstItem="G9Z-5G-Icb" firstAttribute="top" secondItem="94X-8d-rQR" secondAttribute="bottom" constant="1" id="Gqv-0H-bLV"/>
+                            <constraint firstItem="G9Z-5G-Icb" firstAttribute="centerX" secondItem="ZvD-4i-GSs" secondAttribute="centerX" id="UNc-Ot-e9z"/>
+                            <constraint firstItem="8h5-BP-bSf" firstAttribute="top" secondItem="G9Z-5G-Icb" secondAttribute="bottom" constant="8" id="YFy-ZQ-Htq"/>
+                            <constraint firstItem="94X-8d-rQR" firstAttribute="top" secondItem="WR9-Bq-CB7" secondAttribute="bottom" constant="8" id="cDe-JY-DCb"/>
+                            <constraint firstItem="94X-8d-rQR" firstAttribute="leading" secondItem="ZvD-4i-GSs" secondAttribute="leading" id="x5z-hy-u86"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="94X-8d-rQR" id="A4F-f2-6Qr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jWT-bi-cKw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1112.8" y="858.62068965517244"/>
         </scene>
     </scenes>
     <resources>
