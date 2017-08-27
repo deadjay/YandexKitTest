@@ -11,12 +11,10 @@ import UIKit
 class PlacesAroundViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+
+    private let apiManager = APIManager()
+    private var places = [Place]()
     var tableViewRoutineDelegates: TableViewRoutineDelegates!
-    
-    let apiManager = APIManager()
-    var places = [Place]()
-    
     
     //UIViewController Lifecycle
     override func viewDidLoad() {
@@ -25,7 +23,6 @@ class PlacesAroundViewController: UIViewController {
         loadResults()
     }
     
-
     //MARK: Methods
     func setupViewController() {
         self.tableViewRoutineDelegates =
@@ -44,6 +41,7 @@ class PlacesAroundViewController: UIViewController {
     
     //MARK: UIButton Actions
     @IBAction func cancelButtonDidTapped(_ sender: Any) {
+        //Setting this to false, because user dismissed ViewController
         LocationManager.shared.shouldSetAnnotation = false
         dismiss(animated: true, completion: nil)
     }

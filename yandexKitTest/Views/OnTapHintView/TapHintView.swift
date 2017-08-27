@@ -14,22 +14,27 @@ enum WhichPlace: Int {
     case placesAround = 1
 }
 
-
+//A delegate that invokes method, when one of the showNearestPlaceButton or 
+//showPlacesAroundButton tapped
 protocol PlacesDelegate: NSObjectProtocol {
     func buttonDidPressed(place: WhichPlace)
 }
 
 class TapHintView: UIView {
     
-    let VIEW_HEIGHT: CGFloat = 100.0
-    var isPresented = false
+    private let VIEW_HEIGHT: CGFloat = 100.0
+    private var isPresented = false
 
-    var showNearestPlaceButton = UIButton()
-    var showPlacesAroundButton = UIButton()
-    var dismissButton = UIButton()
-    var presentedView: UIView!
+    private var showNearestPlaceButton = UIButton()
+    private var showPlacesAroundButton = UIButton()
+    private var dismissButton = UIButton()
+    private var presentedView: UIView!
     
     weak var delegate: PlacesDelegate?
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     init(frame: CGRect, presentedView: UIView) {
         super.init(frame: frame)
@@ -38,16 +43,11 @@ class TapHintView: UIView {
         self.presentedView = presentedView
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     func showView() {
         //If already presented - do nothing
         if isPresented {
             return
         }
-        
         createView()
         UIView.animate(withDuration: 0.5) {
             var newFrame = self.frame

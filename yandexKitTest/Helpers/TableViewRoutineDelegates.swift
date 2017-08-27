@@ -38,7 +38,7 @@ class TableViewRoutineDelegates: NSObject {
         }
     }
     
-    //Recording coordinates to a singletone
+    //Recording coordinates into a singletone
     func setNewCoordinatesFromRow(row: Int) {
         LocationManager.shared.lat = sectionsRowsArray[row].lat
         LocationManager.shared.long = sectionsRowsArray[row].long

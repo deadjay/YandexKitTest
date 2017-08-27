@@ -8,6 +8,7 @@
 
 import Foundation
 
+//A singletone to store current location data
 class LocationManager {
     
     static let shared = LocationManager()
